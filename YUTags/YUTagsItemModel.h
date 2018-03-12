@@ -13,8 +13,21 @@
 
 @property (nonatomic,strong) NSString * text;
 
+
+/**
+ view的size
+ */
 @property (nonatomic,assign,readonly) CGSize size;
 
+
+/**
+ view中文本的size
+ */
+@property (nonatomic,assign,readonly) CGSize textSize;
+
+/**
+ view中文本的font
+ */
 @property (nonatomic,strong) UIFont * font;
 
 
@@ -28,5 +41,31 @@
  隐藏
  */
 @property (nonatomic,assign) BOOL isHidden;
+
+
+/**
+ 文字左距离view边的距离
+ */
+@property (nonatomic,assign) CGFloat textWithLeft;
+
+
+/**
+ 文字顶距离view边的距离
+ */
+@property (nonatomic,assign) CGFloat textWithTop;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

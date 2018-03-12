@@ -8,10 +8,7 @@
 
 #import "YUTagsItemModel.h"
 
-//文字左距离view边的距离
-static CGFloat const TextWithLeft = 6;
-//文字顶距离view边的距离
-static CGFloat const TextWithTop = 6;
+
 
 @implementation YUTagsItemModel
 
@@ -21,6 +18,8 @@ static CGFloat const TextWithTop = 6;
     if (self) {
         self.itemViewMax = 50;
         self.font = [UIFont systemFontOfSize:12];
+        self.textWithLeft = 6;
+        self.textWithTop = 6;
     }
     return self;
 }
@@ -29,7 +28,10 @@ static CGFloat const TextWithTop = 6;
     _text = text;
     
     CGSize textSize = [self sizeWithFont:self.font andMaxSize:CGSizeMake(self.itemViewMax, self.font.lineHeight) str:text];
-    textSize = CGSizeMake(textSize.width + TextWithLeft * 2, textSize.height + TextWithTop * 2);
+    
+    _textSize = textSize;
+    
+    textSize = CGSizeMake(textSize.width + self.textWithLeft * 2, textSize.height + self.textWithTop * 2);
     _size = textSize;
 }
 

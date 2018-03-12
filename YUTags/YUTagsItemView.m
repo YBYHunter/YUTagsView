@@ -22,6 +22,7 @@
 {
     self = [super init];
     if (self) {
+        self.backgroundColor = [UIColor redColor];
         [self addSubview:self.bgImageView];
         [self addSubview:self.titleLab];
     }
@@ -31,14 +32,12 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.bgImageView.frame = self.bounds;
-    self.titleLab.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
 }
 
 - (void)updateYUTagsItemViewWithItme:(YUTagsItemModel *)item {
     self.titleLab.text = item.text;
     self.titleLab.font = item.font;
-    [self.titleLab sizeToFit];
-    
+    self.titleLab.frame = CGRectMake(item.textWithLeft, item.textWithTop, item.textSize.width, item.textSize.height);
 }
 
 

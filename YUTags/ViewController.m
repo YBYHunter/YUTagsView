@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.tagsView];
     
-    self.tagsView.titles = @[@"天气1",@"天气2",@"天气3",@"天气4",@"天气5",@"天气6",@"天气7"];
+    self.tagsView.titles = @[@"天气1",@"天气2",@"哈哈哈哈哈哈哈吃啊喝日",@"天气3",@"天气4",@"天气5",@"天气6",@"天气7"];
     [self.tagsView reloadTagView];
 }
 

@@ -84,6 +84,7 @@ static CGFloat const VSpace = 5;
     
     for (int i = 0; i < self.allItemModelLists.count; i++) {
         YUTagsItemModel * item = self.allItemModelLists[i];
+        item.font = [UIFont systemFontOfSize:9];
         if (i < titles.count) {
             item.text = titles[i];
             item.isHidden = NO;
